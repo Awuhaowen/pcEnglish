@@ -3,53 +3,49 @@
     <my-header></my-header>
 
     <div class="head">
-      <p style="margin-left: 10px;">您的位置:</p>
-      <p style="color: #007aff; cursor: pointer;" @click="sy">首页</p>
+      <p style="margin-left: 10px;">You are here：</p>
+      <p style="color: #007aff; cursor: pointer;" @click="sy">home</p>
       <p style="margin: 0 10px">></p>
-      <p style="color: #007aff; cursor: pointer;" @click="gr">个人中心</p>
+      <p style="color: #007aff; cursor: pointer;" @click="gr">personal center</p>
       <p style="margin: 0 10px">></p>
-      <p>修改密码</p>
+      <p style="color: #007aff; cursor: pointer;" @click="setting">setting</p>
+      <p style="margin: 0 10px">></p>
+      <p>change</p>
     </div>
 
     <div class="yy">
       <p></p>
-      <h4>修改密码</h4>
+      <h4>change password</h4>
     </div>
 
     <div class="xg">
       <div>
-        <p>用户名：</p>
+        <p>username：</p>
         <span>tom</span>
       </div>
 
       <div>
-        <p>原密码：</p>
-        <el-input
-          placeholder="请输入原密码"
-          v-model="input1"
-          show-password
-        ></el-input>
+        <p>original password：</p>
+        <el-input placeholder="enter your PIN" v-model="input1" show-password></el-input>
       </div>
       <div>
-        <p>新密码：</p>
-        <el-input
-          placeholder="请输入新密码"
-          v-model="input2"
-          show-password
-        ></el-input>
+        <p>new code：</p>
+        <el-input placeholder="Please enter the originali password" v-model="input2" show-password></el-input>
       </div>
       <div>
-        <p>确认密码：</p>
+        <p>confirm password：</p>
         <el-input
-          placeholder="请确认密码"
+          placeholder="Please enter your confirmation password"
           v-model="input3"
           show-password
         ></el-input>
       </div>
       <div class="tj">
-        <el-button class="cg" :plain="true" @click="open2">提交</el-button>
+        <el-button class="cg" :plain="true" @click="open2">submit</el-button>
       </div>
-      <h4 @click="gr" class="fh">返回</h4>
+    </div>
+    <div id="btn">
+      <p @click="gr">return</p>
     </div>
   </main>
 </template>
@@ -72,6 +68,10 @@ export default {
       this.$router.push("/");
     },
 
+    setting() {
+      this.$router.push("modify");
+    },
+
     open2() {
       this.$message({
         message: "提交成功",
@@ -87,16 +87,19 @@ export default {
 </script>
 
 <style scoped>
-.fh {
+#btn {
+  text-align: center;
+  width: 70%;
+  cursor: pointer;
+  margin: 20px auto;
+}
+
+#btn > p {
+  line-height: 40px;
   color: #fff;
   background-color: #007aff;
-  width: 90%;
-  height: 40px;
-  line-height: 40px;
-  margin: 225px auto 10px;
-  text-align: center;
   border-radius: 5px;
-  cursor: pointer;
+  text-align: center;
 }
 
 .xg > .tj {

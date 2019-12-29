@@ -3,27 +3,89 @@
     <my-header></my-header>
 
     <div class="head">
-      <p style="margin-left: 10px;">您的位置:</p>
-      <p style="color: #007aff; cursor: pointer;" @click="sy">首页</p>
+      <p style="margin-left: 10px;">You are here：</p>
+      <p style="color: #007aff; cursor: pointer;" @click="sy">home</p>
       <p style="margin: 0 10px">></p>
-      <p style="color: #007aff; cursor: pointer;" @click="gr">个人中心</p>
+      <p style="color: #007aff; cursor: pointer;" @click="gr">Personal Center</p>
       <p style="margin: 0 10px">></p>
-      <p>关于我们</p>
+      <p>About us</p>
     </div>
 
     <div class="yy">
       <p></p>
-      <h4>关于我们</h4>
+      <h4>About us</h4>
     </div>
 
     <div class="bd">
-      <img src="@/assets/images/bd_logo.png" alt="" />
-      <p>
-        “百度——全球最大的中文搜索引擎及最大的中文网站,全球领先的人工智能公司。2000年1月1日创立于中关村公司创始人李彦宏拥有“超链分析”技术专利,使中国成为美国罗斯、韩国之外,全球仅有的四个拥有独立搜索引擎核心技术的国家之一。基于对人工智能的多年布局与长期积累,百度在深度学习领域领先世界,并在2016年被《财富》杂志称为全球AI四巨头之一。每天,百度响应来自百余个国家和地区的数十亿次搜索请求。百度以“用科技让复杂的世界更简单”为使命,不断坚持技创新,致力于提供更懂用户的产品及服务。百度移动应用月活跃设备数超过11亿。百度以技术为信仰,在技术研发、人才引进等方面坚持长期持续的投入。根据中国专利保护协会2018年统计,百度以2368件申请量成为中国人工智能专利领头羊。
-        在“夯实移动基础,决胜AI时代”的战略指导...”
-      </p>
+      <div>
+        <img src="@/assets/images/logo.png" alt />
+      </div>
 
-      <h4 @click="gr">返回</h4>
+      <h2>Electromechanical</h2>
+      <p>
+        Established in July 1988, China Chamber of Commerce for import and
+        export of mechanical and electrical products (hereinafter referred to
+        as "Chamber of Commerce for mechanical and electrical products") is an
+        industrial, national and non-profit social organization voluntarily
+        formed by various economic organizations registered in the territory
+        of the people's Republic of China and engaged in the production,
+        import and export trade of mechanical and electrical products and
+        related activities.
+      </p>
+      <p>
+        According to Article 56, Chapter 9 of the foreign trade law of the
+        people's Republic of China, the responsibilities of the chamber of
+        Commerce for import and export are to provide production, marketing,
+        information, training and other services related to foreign trade,
+        play a coordinating and self-discipline role, apply for relief
+        measures for foreign trade according to law, safeguard the interests
+        of members and industries, and report members to relevant government
+        departments Suggestions on foreign trade and foreign trade promotion
+        activities.
+      </p>
+      <p>
+        As the only National Chamber of Commerce in the import and export
+        industry of mechanical and electrical products in China, the chamber
+        now has nearly 10000 member enterprises, including the leading
+        backbone enterprises and a large number of small and medium-sized
+        enterprises in the field of mechanical and electrical foreign trade,
+        with strong industry representation. In June 2012, the chamber of
+        Commerce of mechanical and electrical industry was rated as the
+        highest level in China - 5A social organization by the Ministry of
+        civil affairs. Established in July 1988, China Chamber of Commerce for
+        import and export of mechanical and electrical products (hereinafter
+        referred to as "Chamber of Commerce for mechanical and electrical
+        products") is an industrial, national and non-profit social
+        organization voluntarily formed by various economic organizations
+        registered in the territory of the people's Republic of China and
+        engaged in the production, import and export trade of mechanical and
+        electrical products and related activities.
+      </p>
+      <p>
+        According to Article 56, Chapter 9 of the foreign trade law of the
+        people's Republic of China, the responsibilities of the chamber of
+        Commerce for import and export are to provide production, marketing,
+        information, training and other services related to foreign trade,
+        play a coordinating and self-discipline role, apply for relief
+        measures for foreign trade according to law, safeguard the interests
+        of members and industries, and report members to relevant government
+        departments Suggestions on foreign trade and foreign trade promotion
+        activities.
+      </p>
+      <p>
+        As the only National Chamber of Commerce in the import and export
+        industry of mechanical and electrical products in China, the chamber
+        now has nearly 10000 member enterprises, including the leading
+        backbone enterprises and a large number of small and medium-sized
+        enterprises in the field of mechanical and electrical foreign trade,
+        with strong industry representation. In June 2012, the chamber of
+        Commerce of mechanical and electrical industry was rated as the
+        highest level in China - 5A social organization by the Ministry of
+        civil affairs.
+      </p>
+      <div id="btn">
+        <p @click="gr">Return</p>
+      </div>
     </div>
   </main>
 </template>
@@ -49,25 +111,40 @@ export default {
 </script>
 
 <style scoped>
-.bd > h4 {
+#btn {
+  text-align: center;
+  width: 70%;
+  cursor: pointer;
+  margin: 20px auto;
+}
+
+#btn > p {
+  line-height: 40px;
   color: #fff;
   background-color: #007aff;
-  width: 90%;
-  height: 40px;
-  line-height: 40px;
-  margin: 225px auto 10px;
-  text-align: center;
   border-radius: 5px;
-  cursor: pointer;
+  text-align: center;
 }
 
 .bd > p {
   text-indent: 2em;
+  display: inline-block;
+  text-align: justify;
+  line-height: 1.7;
 }
 
-.bd > img {
-  width: 100%;
-  height: 200px;
+.bd > h2 {
+  text-align: center;
+  color: #6c6c6c;
+}
+
+.bd > div {
+  text-align: center;
+}
+
+.bd > div > img {
+  width: 70%;
+  height: 70px;
 }
 
 .bd {

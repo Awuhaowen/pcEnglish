@@ -1,20 +1,18 @@
 <template>
   <main style="height: 100vh;background: #fff">
     <el-page-header
-      style="padding: 10px; text-aigth: center"
+      style="padding: 10px; text-aigth: center font-size: 20px;"
       @back="goBack"
-      content="消息"
-    >
-    </el-page-header>
+      content="information"
+    ></el-page-header>
 
     <div class="xx">
-      <h2>@Artepharm Co., Ltd., China您好。</h2>
+      <h2>@Hello, baidu user</h2>
       <p>
-        你关注的
-        <span style="color: #007aff">第二届中日第三方市场合作论坛</span>
-        有更新：您的邀约已通过，感谢您的参加。
+        The meeting you follow has been updated: update content update content
+        update content update content update content update content view details
       </p>
-      <p style="margin-top: 20px;">2019-11-15 12:12:50</p>
+      <p style="text-align: right; margin-top: 20upx;">2019-08-12 12:12:50</p>
     </div>
   </main>
 </template>
@@ -39,10 +37,10 @@ export default {
 }
 
 .xx > h2 {
-  font-size: 18px;
-  color: #101010;
+  font-size: 24px;
+  line-height: 2;
   font-weight: 500;
-  line-height: 3;
+  color: #666;
 }
 
 .xx > p:last-of-type {
@@ -50,8 +48,8 @@ export default {
 }
 
 .xx > p {
-  font-size: 14px;
-  color: #5e5e5e;
-  line-height: 25px;
+  color: #959595;
+  font-size: 17px;
+  line-height: 1.6;
 }
 </style>

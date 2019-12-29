@@ -3,35 +3,19 @@
     <my-header></my-header>
 
     <div class="head">
-      <p style="margin-left: 10px;">您的位置:</p>
-      <p style="color: #007aff; cursor: pointer;" @click="sy">首页</p>
+      <p style="margin-left: 10px;">You are here：</p>
+      <p style="color: #007aff; cursor: pointer;" @click="sy">home</p>
       <p style="margin: 0 10px">></p>
-      <p>个人中心</p>
+      <p>personal center</p>
     </div>
 
     <div class="main">
-      <div class="hd">
-        <div>
-          <img src="@/assets/images/huoDong.png" alt="" />
-          <p>我的活动</p>
-        </div>
-        <img src="@/assets/images/youJianTou.png" alt="" />
-      </div>
-
-      <div @click="yy" class="hd">
-        <div>
-          <img src="@/assets/images/yuYue.png" alt="" />
-          <p>我的预约</p>
-        </div>
-        <img src="@/assets/images/youJianTou.png" alt="" />
-      </div>
-
       <div class="wm" v-for="(item, i) in wm" :key="i" @click="gy(i)">
         <div>
-          <img :src="item.pic1" alt="" />
+          <img :src="item.pic1" alt />
           <p>{{ item.p }}</p>
         </div>
-        <img :src="item.pic2" alt="" />
+        <img :src="item.pic2" alt />
       </div>
     </div>
   </main>
@@ -45,18 +29,23 @@ export default {
     return {
       wm: [
         {
+          pic1: require("@/assets/images/yuYue.png"),
+          p: "My Bookings",
+          pic2: require("@/assets/images/youJianTou.png")
+        },
+        {
           pic1: require("@/assets/images/laBa.png"),
-          p: "关于我们",
+          p: "About Us",
           pic2: require("@/assets/images/youJianTou.png")
         },
         {
           pic1: require("@/assets/images/sheZhi.png"),
-          p: "设置",
+          p: "Setting",
           pic2: require("@/assets/images/youJianTou.png")
         },
         {
           pic1: require("@/assets/images/tuiChu.png"),
-          p: "退出登录",
+          p: "Log off",
           pic2: require("@/assets/images/youJianTou.png")
         }
       ]
@@ -69,12 +58,14 @@ export default {
     },
 
     gy(i) {
-      if (i == 0) {
+      if (i == 1) {
         this.$router.push("About");
-      } else if (i == 1) {
+      } else if (i == 2) {
         this.$router.push("modify");
-      } else {
-        this.$router.push('login')
+      } else if (i == 3) {
+        this.$router.push("login");
+      } else if (i == 0) {
+        this.$router.push("yuYue");
       }
     },
 
@@ -137,7 +128,8 @@ export default {
   display: flex;
   align-items: center;
   border-radius: 4px;
-  line-height: 40px;
+  margin: 20px 0;
+  line-height: 51px;
   box-shadow: 1px 1px 2px #dcdcdc;
   border-left: 2px solid #007aff;
 }

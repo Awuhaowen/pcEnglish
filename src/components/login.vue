@@ -1,28 +1,50 @@
 <template>
   <main style="height: 100vh">
     <div class="con">
-      <img src="@/assets/images/logo.png" alt="" />
+      <img src="@/assets/images/logo.png" alt />
 
       <div class="dl">
         <div class="d">
-          <p>手机号登录</p>
-          <p>邮箱登录</p>
+          <p
+            v-for="(item, i) in pe"
+            :key="i"
+            @click="d(i)"
+            :class="[i == index ? 'p1' : '']"
+          >{{ item }}</p>
         </div>
 
-        <div class="p">
-          <p>手机号:</p>
-          <el-input v-model="input1" placeholder="请输入手机号"></el-input>
+        <div v-show="p">
+          <div class="p">
+            <p>Mobile Phone Number：</p>
+            <el-input v-model="input1" placeholder="Mobile Phone Number"></el-input>
+          </div>
+
+          <div class="p">
+            <p>Verification Code：</p>
+            <el-input v-model="input2" placeholder="Verification Code"></el-input>
+            <span>Click to Get</span>
+          </div>
+          <p @click="dl" class="fh">login</p>
         </div>
 
-        <div class="p">
-          <p>验证码:</p>
-          <el-input v-model="input2" placeholder="请输入验证码"></el-input>
-          <span>点击获取</span>
+        <div class="e" v-show="e">
+          <div class="p">
+            <p>Email Address：</p>
+            <el-input v-model="input3" placeholder="Please enter email address"></el-input>
+          </div>
+
+          <div class="p">
+            <p>Password：</p>
+            <el-input v-model="input4" type="password" placeholder="Please input a password"></el-input>
+          </div>
+          <p @click="dl" class="fh">login</p>
         </div>
-        <p @click="dl" class="fh">登录</p>
       </div>
     </div>
-    <p>© 中国机电产品进出口商会</p>
+    <p>
+      © China Chamber of Commerce for the Import and Export of Mechanical and
+      Electrical products
+    </p>
   </main>
 </template>
 
@@ -31,22 +53,50 @@ export default {
   data() {
     return {
       input1: "",
-      input2: ""
+      input2: "",
+      input3: "",
+      input4: "",
+      index: 0,
+      p: true,
+      e: false,
+      pe: ["Login with Mobile Phone Number", "Login with Email Address"]
     };
   },
 
   methods: {
     dl() {
       this.$router.push("/");
+    },
+
+    d(i) {
+      if (i == 0) {
+        this.p = true;
+        this.index = i;
+        this.e = false;
+      } else {
+        this.p = false;
+        this.index = i;
+        this.e = true;
+      }
     }
   }
 };
 </script>
 
 <style scoped>
+.p1 {
+  font-size: 15px;
+  color: #007aff;
+}
+
+.d > p {
+  cursor: pointer;
+}
+
 main > p {
   text-align: center;
-  margin-top: 25%;
+  margin: 25% auto;
+  width: 70%;
 }
 
 .fh {
@@ -61,20 +111,20 @@ main > p {
   cursor: pointer;
 }
 
-.dl > .p > span {
+.p > span {
   position: absolute;
-  top: 174px;
+  top: 192px;
   right: 40px;
   color: #007aff;
   cursor: pointer;
 }
 
-.dl > .p > p {
+.p > p {
   line-height: 40px;
   position: relative;
 }
 
-.dl > .d {
+.d {
   display: flex;
   align-items: center;
   justify-content: space-around;

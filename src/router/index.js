@@ -23,6 +23,61 @@ const routes = [
       import(/* webpackChunkName: "about" */ "../components/myHeader.vue")
   },
   {
+    path: "/lunTan",
+    name: "lunTan",
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../components/lunTan.vue")
+  },
+  {
+    path: "/zhanShi",
+    name: "zhanShi",
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../components/zhanShi.vue")
+  },
+  {
+    path: "/zhuanTi",
+    name: "zhuanTi",
+    // route nTan",
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../components/zhuanTi.vue")
+  },
+  {
+    path: "/yqInput",
+    name: "yqInput",
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../common/yqInput.vue")
+  },
+  {
+    path: "/success",
+    name: "success",
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../common/success.vue")
+  },
+  {
+    path: "/displayList",
+    name: "displayList",
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../components/displayList.vue")
+  },
+  {
     path: "/notice",
     name: "notice",
     // route level code-splitting

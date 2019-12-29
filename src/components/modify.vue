@@ -3,20 +3,20 @@
     <my-header></my-header>
 
     <div class="head">
-      <p style="margin-left: 10px;">您的位置:</p>
-      <p style="color: #007aff; cursor: pointer;" @click="sy">首页</p>
+      <p style="margin-left: 10px;">You are here：</p>
+      <p style="color: #007aff; cursor: pointer;" @click="sy">home</p>
       <p style="margin: 0 10px">></p>
-      <p style="color: #007aff; cursor: pointer;" @click="gr">个人中心</p>
+      <p style="color: #007aff; cursor: pointer;" @click="gr">personal center</p>
       <p style="margin: 0 10px">></p>
-      <p>设置</p>
+      <p>setting</p>
     </div>
 
     <div @click="yy" class="hd">
       <div>
-        <img src="@/assets/images/yuYue.png" alt="" />
-        <p>修改密码</p>
+        <img src="@/assets/images/yuYue.png" alt />
+        <p>Change Password</p>
       </div>
-      <img src="@/assets/images/youJianTou.png" alt="" />
+      <img src="@/assets/images/youJianTou.png" alt />
     </div>
   </main>
 </template>

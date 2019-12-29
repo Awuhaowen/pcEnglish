@@ -1,7 +1,7 @@
 <template>
   <main style="height: 100vh">
     <my-header></my-header>
-    <img style="width: 100%;" src="@/assets/images/h1.png" alt="" />
+    <img style="width: 100%;" src="@/assets/images/h1.png" alt />
     <div class="btn">
       <p v-for="(item, i) in btn" :key="i" @click="b(i)">{{ item }}</p>
     </div>
@@ -14,15 +14,22 @@ export default {
   components: { myHeader },
   data() {
     return {
-      btn: ["活动介绍", "论坛报名", "签约项目申报", "展示项目申报", "活动主题"]
+      btn: [
+        "Enterprise introduction",
+        "Forum registration",
+        "Contract project declaration",
+        "Display project declaration",
+        "Interactive introduction",
+        "Enterprise display"
+      ]
     };
   },
   methods: {
     b(i) {
       if (i == 0) {
-        this.$router.push("activity");
-      } else if (i == 4) {
-        this.$router.push("zhuTi");
+        this.$router.push("lunTan");
+      } else if (i == 5) {
+        this.$router.push("displayList");
       }
     }
   }

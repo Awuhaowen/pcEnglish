@@ -1,9 +1,9 @@
 <template>
   <main style="height: 100vh;">
     <div class="head">
-      <img src="@/assets/images/fanHui.png" @click="fanHui" alt="" />
+      <img src="@/assets/images/fanHui.png" @click="fanHui" alt />
 
-      <div>
+      <div style="font-size: 20px">
         <p
           :style="{
             margin: i == 0 ? '0 150px' : ''
@@ -12,9 +12,7 @@
           :key="i"
           @click="head(i)"
           :class="[i == index ? 'xz' : '']"
-        >
-          {{ item }}
-        </p>
+        >{{ item }}</p>
       </div>
     </div>
 
@@ -27,8 +25,8 @@
     </div>
 
     <div class="tz" v-show="tz">
-      <img src="@/assets/images/tongZhi.png" alt="">
-      <p>暂无通知</p>
+      <img src="@/assets/images/tongZhi.png" alt />
+      <p>No notice</p>
     </div>
   </main>
 </template>
@@ -40,24 +38,24 @@ export default {
       xx: true,
       tz: false,
       index: 0,
-      xt: ["消息", "通知"],
+      xt: ["information", "inform"],
       con: [
         {
-          p1: "Baidu",
+          p1: "Beijing commercial trade co. LTD",
           p2:
-            "@Artepharm Co., Ltd., China您好。你关注的第二届中日第三方市场合作论坛",
+            "@Hello, baidu user, the meeting you follow has been updated:update content update content update content update contentupdate content update content view details",
           p3: "2019-11-15 12:12:50"
         },
         {
-          p1: "头条",
+          p1: "Beijing commercial trade co. LTD",
           p2:
-            "@Artepharm Co., Ltd., China您好。你关注的第二届中日第三方市场合作论坛",
+            "@Hello, baidu user, the meeting you follow has been updated:update content update content update content update contentupdate content update content view details",
           p3: "2019-11-15 16:10:30"
         },
         {
-          p1: "Baidu",
+          p1: "Beijing commercial trade co. LTD",
           p2:
-            "@Artepharm Co., Ltd., China您好。你关注的第二届中日第三方市场合作论坛",
+            "@Hello, baidu user, the meeting you follow has been updated:update content update content update content update contentupdate content update content view details",
           p3: "2019-11-15 12:12:50"
         }
       ]
